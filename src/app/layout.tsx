@@ -1,11 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import Logo from "@/components/Logo";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export const viewport: Viewport = {
   themeColor: "#ffffff",
@@ -47,7 +42,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md">
+          <div className="mx-auto flex h-[56px] sm:h-[64px] md:h-[72px] max-w-[1400px] items-center justify-between px-4 sm:px-6">
+            <Logo />
+            <div className="flex items-center gap-3 sm:gap-5 md:gap-6">
+              <a
+                href="https://hillview.tv"
+                className="hidden sm:block text-sm font-medium text-[#4a5568] transition-colors duration-200 hover:text-[#1a2533]"
+              >
+                Home
+              </a>
+              <a
+                href="https://hillview.tv/content"
+                className="rounded-full bg-[#197bff] px-3.5 py-1.5 sm:px-4 sm:py-2 md:px-5 text-xs sm:text-sm font-medium text-white shadow-[0_2px_8px_rgba(25,123,255,0.25)] transition-all duration-200 hover:bg-[#0d6efd] hover:shadow-[0_4px_16px_rgba(25,123,255,0.35)]"
+              >
+                Watch More
+              </a>
+            </div>
+          </div>
+          <div className="mx-4 sm:mx-6 h-px bg-gradient-to-r from-transparent via-[#c8d5e6] to-transparent" />
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }

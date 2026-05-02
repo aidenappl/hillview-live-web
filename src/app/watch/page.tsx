@@ -1,19 +1,35 @@
 export default function WatchPage() {
   return (
-    <div className="fixed inset-0 flex items-center justify-center">
-      <div>
+    <div className="fixed inset-0 flex items-center justify-center bg-[#eef2f7]">
+      {/* Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="bg-blob bg-blob-1" />
+        <div className="bg-blob bg-blob-2" />
+        <div className="bg-blob bg-blob-3" />
+        <div className="bg-blob bg-blob-4" />
+        <div className="bg-blob bg-blob-5" />
+        <div className="bg-blob bg-blob-6" />
+        <div className="bg-blob bg-blob-7" />
+        <div className="bg-ring bg-ring-1" />
+        <div className="bg-ring bg-ring-2" />
+        <div className="bg-ring bg-ring-3" />
+        <div className="bg-ring bg-ring-4" />
+        <div className="bg-dots" />
+      </div>
+      {/* Video — fluid on mobile, stepped on desktop */}
+      <div className="relative z-10 flex w-full items-center justify-center px-4 pt-[68px] sm:px-6 sm:pt-[80px] md:pt-0">
         <iframe
           className="
-            shadow-[0_0_15px_0px_rgba(0,0,0,0.5)]
-            w-[calc(16px*90)] h-[calc(9px*90)]
-            2xl:w-[calc(16px*90)] 2xl:h-[calc(9px*90)]
-            max-[1600px]:w-[calc(16px*75)] max-[1600px]:h-[calc(9px*75)]
-            max-[1500px]:w-[calc(16px*70)] max-[1500px]:h-[calc(9px*70)]
-            max-[1400px]:w-[calc(16px*60)] max-[1400px]:h-[calc(9px*60)]
-            max-[1000px]:w-[calc(16px*50)] max-[1000px]:h-[calc(9px*50)]
-            max-[800px]:w-[calc(16px*40)] max-[800px]:h-[calc(9px*40)]
-            max-[700px]:w-[calc(16px*30)] max-[700px]:h-[calc(9px*30)]
-            max-[450px]:w-[calc(16px*20)] max-[450px]:h-[calc(9px*20)]
+            w-full max-w-[calc(100vw-2rem)] aspect-video
+            sm:max-w-[calc(100vw-3rem)]
+            md:max-w-none md:aspect-auto
+            md:w-[calc(16px*52)] md:h-[calc(9px*52)]
+            lg:w-[calc(16px*62)] lg:h-[calc(9px*62)]
+            xl:w-[calc(16px*72)] xl:h-[calc(9px*72)]
+            2xl:w-[calc(16px*82)] 2xl:h-[calc(9px*82)]
+            rounded-lg md:rounded-xl
+            shadow-[0_4px_30px_-8px_rgba(0,0,0,0.12)]
+            md:shadow-[0_8px_60px_-12px_rgba(0,0,0,0.15)]
           "
           src="https://vimeo.com/event/1646883/embed/d175f00f9b"
           width="1920"
@@ -22,7 +38,6 @@ export default function WatchPage() {
           allow="autoplay; fullscreen"
           allowFullScreen
         />
-        <div className="relative w-full h-0" />
       </div>
     </div>
   );
