@@ -24,9 +24,9 @@ export default function LiveBadge() {
   if (!isLive) return null;
 
   return (
-    <span className="flex items-center gap-1 sm:gap-1.5 rounded-full bg-red-500/10 px-1.5 sm:px-2 md:px-2.5 py-0.5 text-[0.55rem] sm:text-[0.6rem] md:text-[0.7rem] font-semibold uppercase tracking-wider text-red-600">
-      <span className="inline-block h-1 w-1 sm:h-1.5 sm:w-1.5 animate-pulse rounded-full bg-red-500" />
-      Live
+    <span className="flex flex-col items-center gap-0.5 rounded-md border border-red-200 bg-red-50 px-2 py-1 sm:px-2.5">
+      <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-red-500 sm:h-2 sm:w-2" />
+      <span className="text-[0.5rem] font-bold uppercase tracking-widest text-red-600 sm:text-[0.55rem]">Live</span>
     </span>
   );
 }

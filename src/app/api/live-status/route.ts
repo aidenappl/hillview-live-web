@@ -22,8 +22,9 @@ export async function GET() {
     // it shows an "ended" / "not started" state.
     const isLive =
       html.includes('"live_event"') &&
-      !html.includes("ended") &&
-      !html.includes("not_started");
+      html.includes('"streaming"') &&
+      !html.includes('"ended"') &&
+      !html.includes('"scheduled"');
 
     return Response.json({ live: isLive });
   } catch {
