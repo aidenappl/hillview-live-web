@@ -22,6 +22,7 @@ export default function WatchPage() {
           className="
             w-full max-w-[calc(100vw-2rem)] aspect-video
             sm:max-w-[calc(100vw-3rem)]
+            max-h-[calc(100vh-10rem)]
             md:max-w-none md:aspect-auto
             md:w-[calc(16px*52)] md:h-[calc(9px*52)]
             lg:w-[calc(16px*62)] lg:h-[calc(9px*62)]
