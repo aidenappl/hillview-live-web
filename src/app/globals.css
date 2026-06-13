@@ -140,6 +140,54 @@ h1, h2, h3, h4, h5, h6, p, span {
   mask-image: radial-gradient(ellipse 65% 55% at 50% 50%, black 25%, transparent 100%);
 }
 
+/* Player — explicit w+h at every breakpoint, triple-capped to guarantee 16:9 */
+
+/* Mobile: fluid, fits within nav offset + bottom margin */
+.player-frame {
+  width: min(calc(100vw - 2rem), calc((100dvh - 6rem) * 16 / 9));
+  height: min(calc((100vw - 2rem) * 9 / 16), calc(100dvh - 6rem));
+}
+
+/* sm (640px): slightly more horizontal breathing room */
+@media (min-width: 640px) {
+  .player-frame {
+    width: min(calc(100vw - 3rem), calc((100dvh - 7rem) * 16 / 9));
+    height: min(calc((100vw - 3rem) * 9 / 16), calc(100dvh - 7rem));
+  }
+}
+
+/* md / iPad (768px): preferred 832×468 */
+@media (min-width: 768px) {
+  .player-frame {
+    width: min(832px, calc(100vw - 6rem), calc((100dvh - 4rem) * 16 / 9));
+    height: min(468px, calc(100dvh - 4rem), calc((100vw - 6rem) * 9 / 16));
+  }
+}
+
+/* lg / desktop (1024px): preferred 992×558 */
+@media (min-width: 1024px) {
+  .player-frame {
+    width: min(992px, calc(100vw - 6rem), calc((100dvh - 4rem) * 16 / 9));
+    height: min(558px, calc(100dvh - 4rem), calc((100vw - 6rem) * 9 / 16));
+  }
+}
+
+/* xl (1280px): preferred 1152×648 */
+@media (min-width: 1280px) {
+  .player-frame {
+    width: min(1152px, calc(100vw - 6rem), calc((100dvh - 4rem) * 16 / 9));
+    height: min(648px, calc(100dvh - 4rem), calc((100vw - 6rem) * 9 / 16));
+  }
+}
+
+/* 2xl (1536px): preferred 1312×738 */
+@media (min-width: 1536px) {
+  .player-frame {
+    width: min(1312px, calc(100vw - 6rem), calc((100dvh - 4rem) * 16 / 9));
+    height: min(738px, calc(100dvh - 4rem), calc((100vw - 6rem) * 9 / 16));
+  }
+}
+
 /* Mobile */
 @media (max-width: 640px) {
   .bg-blob-1 { width: 80vw; height: 80vw; top: -25%; left: -20%; filter: blur(70px); }
