@@ -73,7 +73,10 @@ export default function RootLayout({
             <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
               {/* Brand */}
               <div className="flex flex-col gap-4">
-                <a href="https://hillview.tv" className="group flex items-center gap-2.5">
+                <a
+                  href="https://hillview.tv"
+                  className="group flex items-center gap-2.5"
+                >
                   <Image
                     src="/logos/sun.png"
                     alt="HillviewTV"
@@ -86,7 +89,7 @@ export default function RootLayout({
                   </span>
                 </a>
                 <p className="max-w-[220px] text-sm leading-relaxed text-[#4a5f78]">
-                  Hillview Middle School's student-run broadcast network.
+                  Hillview Middle School&apos;s student-run broadcast network.
                 </p>
               </div>
 
@@ -96,17 +99,49 @@ export default function RootLayout({
                   Navigate
                 </span>
                 <ul className="flex flex-col gap-2.5">
-                  <li><a href="https://hillview.tv" className="text-sm text-[#4a5f78] transition-colors duration-150 hover:text-white">Home</a></li>
-                  <li><a href="https://watch.hillview.tv" className="text-sm text-[#4a5f78] transition-colors duration-150 hover:text-white">Watch Live</a></li>
-                  <li><a href="https://hillview.tv/content" className="text-sm text-[#4a5f78] transition-colors duration-150 hover:text-white">Our Content</a></li>
-                  <li><a href="https://hillview.tv/playlists" className="text-sm text-[#4a5f78] transition-colors duration-150 hover:text-white">Playlists</a></li>
+                  <li>
+                    <a
+                      href="https://hillview.tv"
+                      className="text-sm text-[#4a5f78] transition-colors duration-150 hover:text-white"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://watch.hillview.tv"
+                      className="text-sm text-[#4a5f78] transition-colors duration-150 hover:text-white"
+                    >
+                      Watch Live
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hillview.tv/content"
+                      className="text-sm text-[#4a5f78] transition-colors duration-150 hover:text-white"
+                    >
+                      Our Content
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://hillview.tv/playlists"
+                      className="text-sm text-[#4a5f78] transition-colors duration-150 hover:text-white"
+                    >
+                      Playlists
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
 
             <div className="mt-12 flex flex-col gap-1 border-t border-white/[0.07] pt-6 sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-xs text-[#2e4060]">© {year} HillviewTV. All rights reserved.</span>
-              <span className="text-xs text-[#253346]">Hillview Middle School · San Jose, CA</span>
+              <span className="text-xs text-[#2e4060]">
+                © {year} HillviewTV. All rights reserved.
+              </span>
+              <span className="text-xs text-[#253346]">
+                Hillview Middle School · San Jose, CA
+              </span>
             </div>
           </div>
         </footer>
