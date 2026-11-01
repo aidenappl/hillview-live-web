@@ -6,6 +6,9 @@ export async function GET() {
   try {
     const res = await fetch(STATUS_URL, {
       cache: "no-store",
+      // Vimeo occasionally hangs; without a bound the request ran into the
+      // proxy's 90s timeout and 504'd. Treat a slow answer as "not live".
+      signal: AbortSignal.timeout(5000),
       headers: {
         "User-Agent": "Mozilla/5.0",
       },
